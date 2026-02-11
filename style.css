@@ -1,0 +1,125 @@
+:root {
+    /* ชุดสีจากภาพ Scooby-Doo Minecraft */
+    --bg-color: #7B543A;       /* สีน้ำตาล Scooby (พื้นหลัง) */
+    --card-bg: #ffffff;        /* สีขาว (กล่องเนื้อหา) */
+    --text-main: #3B2C23;      /* สีน้ำตาลเข้ม (ตัวหนังสือ) */
+    --accent-color: #00B4A9;   /* สีเขียวมิ้นต์ปลอกคอ (ปุ่มหลัก) */
+    --hover-color: #9E2B2B;    /* สีแดง Redstone (เมื่อชี้ปุ่ม) */
+    --gold-accent: #B89F38;    /* สีทองป้ายชื่อ (เส้นขอบ/ตกแต่ง) */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(#8d6245 15%, transparent 16%), radial-gradient(#8d6245 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-main);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 4px solid var(--gold-accent);
+}
+
+/* รูปโปรไฟล์ */
+.profile-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* สถานะ Redstone */
+.status-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--hover-color);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(158, 43, 43, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(158, 43, 43, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(158, 43, 43, 0); }
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.bio {
+    font-size: 1rem;
+    color: #6d5648;
+    margin-bottom: 30px;
+}
+
+/* ปุ่มลิงก์ */
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 0 #008f86;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #7a2121;
+    background-color: var(--hover-color);
+}
+
+.link-btn i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+/* ส่วนท้าย */
+.social-footer {
+    margin-top: 35px;
+    font-size: 0.9rem;
+    color: #888;
+}
